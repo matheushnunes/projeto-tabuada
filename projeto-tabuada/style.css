@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(41, 41, 41);
+}
+header {
+    background-color: rgb(250, 143, 143);
+    width: 100%;
+    min-height: 90px;
+    text-align: center;
+}
+header h1 {
+    text-align: center;
+    padding: 15px;
+    font: bold 45px arial;
+}
+main{
+    background-color: rgb(255, 205, 205);
+    font: normal 40px arial;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+main form {
+    display: flex;
+    justify-content: space-between;
+}
+main div {
+    display: flex;
+}
+main input#res {
+    width: 60px;
+    font-size: 30px;
+    margin: 0px 5px 0px 5px;
+    text-align: center;
+}
+main form button{
+    height: 20px;
+    width: 20px;
+    margin: auto;
+}
