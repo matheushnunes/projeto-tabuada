@@ -1,0 +1,310 @@
+:root {
+    --main_color: #fff;
+    --secondary_color: #000;
+    --primary_color: #000E8B;
+    --primary_color_light: #CED6FD;
+    --complementary_color: #C28B00;
+    --background_color: #F0F0F0;
+
+    --font_title: "Merriweather", serif;
+    --font_mono: "Roboto Mono", monospace;
+    font-size: 10px;
+}
+
+#root {
+    height: 100vh;
+    font: 1.6rem normal Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn1 {
+    background-color: var(--complementary_color);
+    color: var(--secondary_color);
+    padding: .3rem 1rem;
+    border-radius: .5rem;
+    font-weight: bold;
+}
+
+.title {
+    font-family: var(--font_title);
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.4rem;
+    margin: 4rem auto 4rem auto;
+    text-align: center;
+    max-width: 70%;
+}
+
+.title2 {
+    font-family: var(--font_title);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    margin: auto auto 4rem auto;
+    text-align: center;
+}
+
+.icone {
+    width: 1.5rem;
+}
+
+.header {
+    position: fixed;
+    top: 0 ;
+    width: 100vw;
+    background-color: var(--primary_color);
+    color: var(--main_color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    padding: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.popUp_header {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--background_color);
+    color: var(--secondary_color);
+    border-radius: 0 0 .5rem 0;
+    box-shadow: .4rem .4rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.popUp_header li {
+    padding: .5rem .8rem;
+    border-bottom: 1px solid var(--secondary_color);
+}
+
+.popUp_header li:last-of-type {
+    border-bottom: none;
+    border-bottom-right-radius: .5rem;
+}
+
+.popUp_header li:hover {
+    background-color: var(--primary_color_light);
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* Comfigurações da section de operações  */
+.section_operation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary_color_light);
+    padding: 1rem;
+    max-width: 33rem;
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: .4rem .4rem 1.3rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 4.5rem;
+}
+
+.btn_setings, .btn_fechar {
+    align-self: flex-end;
+    font-size: 2rem;
+}
+
+.div_equation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.equation {
+    font-size: 2.4rem;
+    font-family: var(--font_mono);
+}
+
+#equation_result {
+    width: 6rem;
+    border-radius: .5rem;
+    margin: 0 1rem;
+    border: none;
+    text-align: center;
+}
+
+#equation_result:focus {
+    outline: none;
+}
+
+/* Comfigurações da section de comfigurações da equação  */
+
+.equationSetings {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.equationSetings p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.equationSetings input[type="checkbox"] {
+    width: 1.6rem;
+    height: 1.6rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--main_color);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--primary_color);
+    border-color: var(--primary_color);
+}
+
+.equationSetings label {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    cursor: pointer;
+}
+
+.container_select_all {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.container_select_numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select_numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_select_operator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#select_operator {
+    width: fit-content;
+    font-size: 1.8rem;
+    border-radius: .4rem;
+}
+
+#select_number1 {
+    align-items: start;
+}
+
+#select_number2 {
+    align-items: end;
+}
+
+.btn_apply {
+    margin: 1rem auto 0 auto;
+}
+
+/* Tabuadas */
+.section_goTabuadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.container_tabuada {
+    display: flex;
+    justify-content: space-between;
+    min-width: 25rem;
+    max-width: 30rem;
+    margin-bottom: 1.8rem;
+}
+
+/* Footer  */
+footer {
+    background-color: var(--primary_color);
+    color: var(--main_color);
+    min-height: 3rem;
+    display: flex;
+    align-content: center;
+    justify-items: end;
+    margin: auto;
+}
+
+footer p {
+    margin-right: 1.5rem;
+}
+
+footer p a {
+    transition: .3s;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    transition: .3s;
+    color: var(--primary_color_light);
+}
+
+/* Pagina de tabuadas */
+
+.btn_voltar {
+    display: flex;
+    align-items: start;
+    align-self: flex-start;
+    margin: 1rem 0;
+}
+
+.section_tabuadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100vw;
+    padding: 2rem;
+    font-family: var(--font_mono);
+}
+
+.div_tabuada {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary_color_light);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: .4rem .4rem 1.3rem rgba(0, 0, 0, 0.15);
+    min-width: max-content;
+}
+
+.operation {
+    text-align: start;
+}
+
