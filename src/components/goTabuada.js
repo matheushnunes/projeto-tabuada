@@ -8,7 +8,6 @@ export default function GoTabuadas () {
     const containerRef = useRef(null)
 
     useEffect(() => {
-        console.log(containerRef.current)
     }, [operatorParam])
 
     function handleNavigate (path) {

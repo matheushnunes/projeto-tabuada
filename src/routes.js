@@ -1,14 +1,19 @@
 import { Routes, Route } from "react-router-dom";
+import { createContext, useContext, useState} from "react";
+
 import Home from "./components/home";
 import Tabuada from "./components/tabuada";
+import { StatesContext, ContextProvider } from "./components/globalStates";
 
 function AppRoutes() {
   return (
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Tabuada/:operatorParam" element={<Tabuada />} />
-    </Routes>
+    <ContextProvider>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Tabuada/:operatorParam" element={<Tabuada />} />
+      </Routes>
+    </ContextProvider>
   );
 }
 
-export default AppRoutes;
+export {AppRoutes, ContextProvider, StatesContext};
