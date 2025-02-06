@@ -1,0 +1,38 @@
+.main_tabuada {
+    max-width: 70rem;
+}
+
+.btn_voltar {
+    display: flex;
+    align-items: start;
+    align-self: flex-start;
+    margin: 1rem;
+}
+
+.title_tabuada {
+    margin: 2rem auto 3rem;
+}
+
+.section_tabuadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: var(--font_mono);
+    margin-bottom: 2rem;
+}
+
+.div_tabuada {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary_color_light);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: .4rem .4rem 1.3rem rgba(0, 0, 0, 0.15);
+    min-width: max-content;
+}
+
+.operation {
+    text-align: start;
+}

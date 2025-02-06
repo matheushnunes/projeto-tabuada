@@ -1,3 +1,6 @@
+//Estilo:
+import '../styles/tabuada.css'
+
 // Bibliotecas:
 import { useParams, useNavigate  } from "react-router-dom"
 
@@ -41,6 +44,9 @@ export default function Tabuada () {
     break;
     case "subtracao":
       calculate = (a, b) =>{
+        if (b == 0) {
+          return a
+        }
         return parseFloat((a / b).toFixed(2))
       }
       operatorParam = "Subtração"
@@ -50,12 +56,12 @@ export default function Tabuada () {
     return (
       <>
         <Header />
-        <main>
+        <main className="main_tabuada">
           <button className="btn btn_voltar" onClick={()=>navigate(-1)}>
-            <img src={arrow} />
+            <img src={arrow} className="img_invert" />
           </button>
           
-          <h1 className="title">Tabuada de {operatorParam}</h1>
+          <h1 className="title title_tabuada">Tabuada de {operatorParam}</h1>
 
           <section className="section_tabuadas">
             {[...Array(11).keys()].map(f => (
@@ -66,8 +72,8 @@ export default function Tabuada () {
               </div>
             ))}
           </section>
+          <GoTabuadas />
         </main>
-        <GoTabuadas />
         <Footer />
       </>
     )

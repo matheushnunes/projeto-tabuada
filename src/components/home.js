@@ -1,6 +1,6 @@
 // Bibliotecas:
 import { useMediaQuery } from 'react-responsive';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Icones:
@@ -12,23 +12,30 @@ import Footer from './footer';
 import GoTabuadas from './goTabuada';
 
 export default function Home() {
+  const [isDarkTheme, setIsDarkTheme] = useState()
+
+  function setTheme (theme) {
+    setIsDarkTheme(theme)
+  }
+
   return (
     <>
-      <Header />
-      <Main />
+      <Header setTheme={setTheme} />
+      <Main isDarkTheme={isDarkTheme} />
       <Footer />
     </>
   );
 }
   
-  function Main () {
-    const [onSetings, setOnSetings] = useState(true)
+  function Main ( {isDarkTheme} ) {
+    const [onSetings, setOnSetings] = useState(false)
+    const main = useRef(null)
     function handleCLick() {
       setOnSetings(!onSetings)
     }
 
     return (
-      <main>
+      <main ref={main}>
         <h1 className='title'>Aprenda e teste seus conhecimentos em matemática</h1>
         <section className='section_operation'>
           {
@@ -40,7 +47,7 @@ export default function Home() {
             :
             <>
               <button className='btn btn_setings' onClick={handleCLick}> 
-                <img src={icone_setings} />  
+                <img src={icone_setings} className={isDarkTheme&& 'img_invert'} />  
               </button>
               <Equation />
             </>
@@ -90,7 +97,7 @@ export default function Home() {
             ))}
           </div>
           <label htmlFor='select_operator' className='container_select_operator'>
-            Selecione o operador:
+            <span>Selecione o operador:</span>
             <select id='select_operator'>
               <option>x</option>
               <option>-</option>
