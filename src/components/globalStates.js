@@ -37,6 +37,9 @@ function ContextProvider ({ children }) {
   // Operador
   const [operator, setOperator] = useState("X")
 
+  // Tema escuro ou claro
+  const [isDarkTheme, setIsDarkTheme] = useState()
+
   return (
     <StatesContext.Provider
       value={{
@@ -47,7 +50,8 @@ function ContextProvider ({ children }) {
         onSetings,
         setOnSetings,
         operator,
-        setOperator
+        setOperator,
+        isDarkTheme,
       }}
     >
       {children}

@@ -13,34 +13,24 @@ import GoTabuadas from './goTabuada';
 import { ContextProvider, StatesContext } from '../routes';
 
 export default function Home() {
-  const [isDarkTheme, setIsDarkTheme] = useState()
-
-  function setTheme (theme) {
-    setIsDarkTheme(theme)
-  }
 
   return (
     <>
-      <Header setTheme={setTheme} />
+      <Header />
       <Main isDarkTheme={isDarkTheme} />
       <Footer />
     </>
-    );
+  );
 }
 
-function Main () {
+function Main ({ isDarkTheme }) {
   const { onSetings, setOnSetings } = useContext(StatesContext)
+
+  const main = useRef(null)
 
   function handleCLick() {
     setOnSetings(!onSetings)
   }
-  
-  function Main ( {isDarkTheme} ) {
-    const [onSetings, setOnSetings] = useState(false)
-    const main = useRef(null)
-    function handleCLick() {
-      setOnSetings(!onSetings)
-    }
 
   return (
     <main ref={main}>
@@ -55,7 +45,7 @@ function Main () {
           :
           <>
             <button className='btn btn_setings' onClick={handleCLick}> 
-              <img src={icone_setings} className={isDarkTheme&& 'img_invert'} />  
+              <img src={icone_setings} className={isDarkTheme && 'img_invert'} />  
             </button>
             <Equation />
           </>
@@ -72,11 +62,11 @@ function Equation () {
   const [randomNumber1, setRandomNumber1] = useState()
   const [randomNumber2, setRandomNumber2] = useState()
   const [result, setResult] = useState()
-
+  
   function gerateNumber () {
     let collum1 = []
     let collum2 = []
-
+    
     let num1 = numbers1.filter(e => e.selected)
     num1.map(e => {
       collum1.push(e.number)
@@ -85,9 +75,9 @@ function Equation () {
     num2.map(e => {
       collum2.push(e.number)
     })
-
+    
     const indiceAleatorio1 = Math.floor(Math.random() * num1.length)
-    const indiceAleatorio2 = Math.floor(Math.random() * num1.length)
+    const indiceAleatorio2 = Math.floor(Math.random() * num2.length)
 
     setRandomNumber1(collum1[indiceAleatorio1])
     setRandomNumber2(collum2[indiceAleatorio2])

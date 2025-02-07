@@ -12,7 +12,6 @@ export default function Header({ setTheme }) {
     const isMobile = useMediaQuery({query: '(max-width: 480px)'})
     const [classMenu, setClassMenu] = useState('open')
     const [menuAberto, setMenuAberto] = useState(false)
-    const [isDarkTheme, setIsDarkTheme] = useState(true)
     const popUp = useRef(null)
     
     if (setTheme) { // Verifica se a funcao foi passada
