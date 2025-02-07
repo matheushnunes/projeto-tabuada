@@ -38,7 +38,7 @@ function ContextProvider ({ children }) {
   const [operator, setOperator] = useState("X")
 
   // Tema escuro ou claro
-  const [isDarkTheme, setIsDarkTheme] = useState()
+  const [isDarkTheme, setIsDarkTheme] = useState(true)
 
   return (
     <StatesContext.Provider
@@ -52,6 +52,7 @@ function ContextProvider ({ children }) {
         operator,
         setOperator,
         isDarkTheme,
+        setIsDarkTheme
       }}
     >
       {children}

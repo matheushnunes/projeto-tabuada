@@ -1,31 +1,40 @@
-:root {
+/* :root {
+    // Cores do tema Escuro
+
     --main_color: #292929;
     --secondary_color: #ffffff;
-    --primary_color: hsl(234, 100%, 17%);
+    --primary_color: #000957;
     --primary_color_light: #353744;
-    --primary_color_medium: #434868;
+    --primary_color_medium: #4a538f;
     --complementary_color: #835e00;
     --background_color: #3c3c3c;
     --background_page_color: #353744;
-
-    --font_title: "Merriweather", serif;
-    --font_mono: "Roboto Mono", monospace;
-    font-size: 10px;
-}
-
-/* :root {
-    --main_color: #fff;
-    --secondary_color: #000;
-    --primary_color: #000E8B;
-    --primary_color_light: #CED6FD;
-    --complementary_color: #C28B00;
-    --background_color: #F0F0F0;
-    --background_page_color: #E5EAFF;
+    --ok_color: #a0ffa0;
+    --error_color: #ffd3d3;
 
     --font_title: "Merriweather", serif;
     --font_mono: "Roboto Mono", monospace;
     font-size: 10px;
 } */
+
+:root { 
+    /* Cores do tema claro */
+
+    --main_color: #fff;
+    --secondary_color: #000;
+    --primary_color: #000E8B;
+    --primary_color_light: #CED6FD;
+    --primary_color_medium: #000E8B;
+    --complementary_color: #C28B00;
+    --background_color: #F0F0F0;
+    --background_page_color: #E5EAFF;
+    --ok_color: #006900;
+    --error_color: #630000;
+
+    --font_title: "Merriweather", serif;
+    --font_mono: "Roboto Mono", monospace;
+    font-size: 10px;
+}
 
 body{
     color: var(--secondary_color);
@@ -168,18 +177,19 @@ main {
     align-items: center;
     justify-content: center;
     background-color: var(--primary_color_light);
-    padding: 2rem;
+    padding: 1rem;
     max-width: fit-content;
     width: 100%;
     border-radius: .5rem;
-    box-shadow: .4rem .4rem 1.3rem rgba(0, 0, 0, 0.15);
+    box-shadow: .2rem .2rem 1.2rem rgba(0, 0, 0, 0.15);
     margin: 0 1rem 4.5rem 1rem;
 }
 
 .btn_setings, .btn_fechar {
     align-self: flex-end;
     font-size: 2rem;
-    color: white;
+    color: var(--secondary_color);
+    padding: 0;
 }
 
 .img_invert {
@@ -190,7 +200,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    align-content: space-between;
+    gap: 2.7rem;
+    padding: 2rem 2rem .5rem 2rem;
 }
 
 .equation {
@@ -208,6 +220,14 @@ main {
 
 #equation_result:focus {
     outline: none;
+}
+
+.acertou {
+    color: var(--ok_color);
+}
+
+.errou {
+    color: var(--error_color);
 }
 
 /* Comfigurações da section de comfigurações da equação  */
@@ -254,6 +274,10 @@ input[type="checkbox"]:checked {
     gap: 2rem;
 }
 
+.text_align_right {
+    text-align: right;
+}
+
 .container_select_numbers {
     display: flex;
     justify-content: space-between;
@@ -281,6 +305,7 @@ input[type="checkbox"]:checked {
 #select_number1 {
     align-items: start;
 }
+
 
 #select_number2 {
     align-items: end;

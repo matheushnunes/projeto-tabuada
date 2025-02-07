@@ -8,16 +8,16 @@ import icone_setings from '../assets/images/icone_setings.svg'
 import { useMediaQuery } from 'react-responsive';
 import { useState, useRef, useEffect, createContext, useContext } from 'react';
 
-export default function Header({ setTheme }) {
+// Componentes:
+import { StatesContext } from "./globalStates";
+
+export default function Header() {
     const isMobile = useMediaQuery({query: '(max-width: 480px)'})
     const [classMenu, setClassMenu] = useState('open')
     const [menuAberto, setMenuAberto] = useState(false)
+    const {isDarkTheme, setIsDarkTheme} = useContext(StatesContext)
     const popUp = useRef(null)
     
-    if (setTheme) { // Verifica se a funcao foi passada
-      setTheme(isDarkTheme)
-    }
-
     function toggleMenu () {
       if (popUp.current) {
         if (classMenu == 'open') {
@@ -64,21 +64,30 @@ export default function Header({ setTheme }) {
     function handleTheme () {
       const root = document.documentElement;
       setIsDarkTheme(!isDarkTheme)
-      // Verifica o tema atual
-      const currentBackground = getComputedStyle(root).getPropertyValue('--main_color').trim();
-      const isDarkTheme = currentBackground === '#000';
 
       // Altera as variáveis CSS
-      if (isDarkTheme) {
+      if (isDarkTheme) { // Se o tema estiver escuro
+        root.style.setProperty('--main_color', '#292929');
+        root.style.setProperty('--secondary_color', '#ffffff');
+        root.style.setProperty('--primary_color', '#000957');
+        root.style.setProperty('--primary_color_light', '#353744');
+        root.style.setProperty('--primary_color_medium', '#000E8B');
+        root.style.setProperty('--complementary_color', '#835e00');
+        root.style.setProperty('--background-color', '#3c3c3c');
+        root.style.setProperty('--background_page_color', '#353744');
+        root.style.setProperty('--ok_color', '#a0ffa0');
+        root.style.setProperty('--error_color', '#ffd3d3');
+      } else { // Se o tema estiver claro
         root.style.setProperty('--main_color', '#fff');
-        root.style.setProperty('--secondary-color', '#2ecc71');
-        root.style.setProperty('--background-color', '#ffffff');
-        root.style.setProperty('--text-color', '#000000');
-      } else {
-        root.style.setProperty('--main_color', '#000');
-        root.style.setProperty('--secondary-color', '#27ae60');
-        root.style.setProperty('--background-color', '#333333');
-        root.style.setProperty('--text-color', '#ffffff');
+        root.style.setProperty('--secondary_color', '#000');
+        root.style.setProperty('--primary_color', '#000E8B');
+        root.style.setProperty('--primary_color_light', '#CED6FD');
+        root.style.setProperty('--primary_color_medium', '#000E8B');
+        root.style.setProperty('--complementary_color', '#C28B00');
+        root.style.setProperty('--background-color', '#F0F0F0');
+        root.style.setProperty('--background_page_color', '#E5EAFF');
+        root.style.setProperty('--ok_color', '#007500');
+        root.style.setProperty('--error_color', '#630000');
       }
     }
 
@@ -98,7 +107,11 @@ export default function Header({ setTheme }) {
             </nav>
           }
           <button className='btn' onClick={handleTheme}>
-            <img src={icone_dark_mode} />
+            {isDarkTheme ?
+              <img src={icone_dark_mode} /> 
+            : 
+              <img src={icone_light_mode} />}
+
           </button>
         </header>
         

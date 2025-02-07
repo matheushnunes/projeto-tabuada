@@ -3,6 +3,7 @@ import '../styles/tabuada.css'
 
 // Bibliotecas:
 import { useParams, useNavigate  } from "react-router-dom"
+import { useContext } from 'react'
 
 // Imagens: 
 import arrow from '../assets/images/arrow.svg'
@@ -11,9 +12,12 @@ import arrow from '../assets/images/arrow.svg'
 import Header from './header'
 import Footer from './footer'
 import GoTabuadas from "./goTabuada"
+import { StatesContext } from './globalStates'
 
 export default function Tabuada () {
   const navigate = useNavigate()
+  const { isDarkTheme } = useContext(StatesContext)
+
   let {operatorParam} = useParams()
   let signal = "X"
   let calculate = (a, b) => {
@@ -58,7 +62,7 @@ export default function Tabuada () {
         <Header />
         <main className="main_tabuada">
           <button className="btn btn_voltar" onClick={()=>navigate(-1)}>
-            <img src={arrow} className="img_invert" />
+            <img src={arrow} className={!isDarkTheme ? "img_invert" : "img"} />
           </button>
           
           <h1 className="title title_tabuada">Tabuada de {operatorParam}</h1>
