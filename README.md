@@ -1,19 +1,20 @@
-### Projeto Tabuada
+# 🧮 Projeto Tabuada
 
-============ Projeto em desenvolvimento ============
+🚧 **Projeto em desenvolvimento** 🚧  
 
-A proposta principal desse site é testar e aprender a tabuadas de matemática jogando um jogo onde o usuário deve acertar o resultado da operação na tela
+A proposta principal deste site é ajudar os usuários a testar e aprender as tabuadas de matemática por meio de um jogo interativo. O objetivo é acertar o resultado das operações exibidas na tela.
 
-## Funcionalidades:
-- Tentar acertar o resultado de operações matemáticas
-- Definir alguns parametros para as operações
-- Ver tabuadas de multiplicação, divisão, adição e subtração
-- Alterar tema do site (claro ou escuro)
+## ✨ Funcionalidades
 
-## Tecnologias usadas no desenvolvimento:
+- Responder operações matemáticas interativas.
+- Definir alguns parâmetros para as operações.
+- Visualizar tabuadas de multiplicação, divisão, adição e subtração.
+- Alternar entre os temas claro e escuro.
 
-- React
-- JavaScript
-- CSS
-- Figma (protótipo)
-  
+## 🛠️ Tecnologias utilizadas
+
+- **React**
+- **JavaScript**
+- **CSS**
+- **Figma** (para prototipagem)
+
