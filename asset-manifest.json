@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/projeto-tabuada/static/css/main.3e5490bd.css",
-    "main.js": "/projeto-tabuada/static/js/main.3507953e.js",
+    "main.js": "/projeto-tabuada/static/js/main.bbd57173.js",
     "index.html": "/projeto-tabuada/index.html",
     "static/media/icone_setings.svg": "/projeto-tabuada/static/media/icone_setings.fdbb6f277ceb169ec7d1ad730b45e154.svg",
     "static/media/icone_light_mode.svg": "/projeto-tabuada/static/media/icone_light_mode.f9abd1c4290a6f9c49b34e0b5fe8fdb3.svg",
@@ -9,10 +9,10 @@
     "static/media/icone_menu.svg": "/projeto-tabuada/static/media/icone_menu.e9b8324f12ddc1932f8682954bcbb6a9.svg",
     "static/media/arrow.svg": "/projeto-tabuada/static/media/arrow.d6d3143265cf42b7fc6f0367fe75dacc.svg",
     "main.3e5490bd.css.map": "/projeto-tabuada/static/css/main.3e5490bd.css.map",
-    "main.3507953e.js.map": "/projeto-tabuada/static/js/main.3507953e.js.map"
+    "main.bbd57173.js.map": "/projeto-tabuada/static/js/main.bbd57173.js.map"
   },
   "entrypoints": [
     "static/css/main.3e5490bd.css",
-    "static/js/main.3507953e.js"
+    "static/js/main.bbd57173.js"
   ]
 }
