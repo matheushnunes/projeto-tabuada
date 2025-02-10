@@ -8,12 +8,10 @@ import { StatesContext, ContextProvider } from "./components/globalStates";
 function AppRoutes() {
   return (
     <ContextProvider>
-      <BrowserRouter basename="process.env.PUBLIC_URL">
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Tabuada/:operatorParam" element={<Tabuada />} />
         </Routes>
-      </BrowserRouter>
     </ContextProvider>
   );
 }
