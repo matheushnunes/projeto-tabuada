@@ -18,3 +18,8 @@ A proposta principal deste site é ajudar os usuários a testar e aprender as ta
 - **CSS**
 - **Figma** (para prototipagem)
 
+  ## Possiveis funcionalidades futuras:
+
+  - Posibilidade de definir um range maior de números para as equações
+
+
