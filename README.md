@@ -1,25 +1,8 @@
-# 🧮 Projeto Tabuada
+# React + Vite
 
-🚧 **Projeto em desenvolvimento** 🚧  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-A proposta principal deste site é ajudar os usuários a testar e aprender as tabuadas de matemática por meio de um jogo interativo. O objetivo é acertar o resultado das operações exibidas na tela.
+Currently, two official plugins are available:
 
-## ✨ Funcionalidades
-
-- Responder operações matemáticas interativas.
-- Definir alguns parâmetros para as operações.
-- Visualizar tabuadas de multiplicação, divisão, adição e subtração.
-- Alternar entre os temas claro e escuro.
-
-## 🛠️ Tecnologias utilizadas
-
-- **React**
-- **JavaScript**
-- **CSS**
-- **Figma** (para prototipagem)
-
-  ## Possiveis funcionalidades futuras:
-
-  - Posibilidade de definir um range maior de números para as equações
-
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
