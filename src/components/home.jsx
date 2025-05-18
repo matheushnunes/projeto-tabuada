@@ -41,15 +41,15 @@ function Main () {
         {
           onSetings ?
           <>
-            <button className='btn btn_fechar' onClick={handleCLick} >X</button>
+            <button className='btn btn_fechar' onClick={handleCLick}>X</button>
             <EquationSetings />
           </>
           :
           <>
-            <button className='btn btn_setings' onClick={handleCLick}> 
-              <img 
-              src={icone_setings} 
-              className={!isDarkTheme? 'img_invert' : 'img'} />  
+            <button className='btn btn_setings' onClick={handleCLick}>
+              <img
+              src={icone_setings}
+              className={!isDarkTheme? 'img_invert' : 'img'} />
             </button>
             <Equation />
           </>
@@ -59,4 +59,3 @@ function Main () {
     </main>
   )
 }
-  
